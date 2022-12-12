@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
  * This will ensure the bundle contains only the core code and respective route bundle
  */
 const CustomFieldExtension = React.lazy(() => import("./routes/CustomField"));
-const EntrySidebarExtension = React.lazy(() => import("./routes/EntrySidebar"));
+const EntrySidebarExtension = React.lazy(() => import("./routes/EntrySidebarKB"));
 const AppConfigurationExtension = React.lazy(() => import("./routes/AppConfiguration"));
 const AssetSidebarExtension = React.lazy(() => import("./routes/AssetSidebar"));
 const StackDashboardExtension = React.lazy(() => import("./routes/StackDashboard"));

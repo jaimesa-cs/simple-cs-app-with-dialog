@@ -1,18 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "@contentstack/venus-components/build/main.css";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
-import "./index.css";
+import 'instantsearch.css/themes/satellite.css';
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
-  <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
