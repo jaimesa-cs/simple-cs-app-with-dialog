@@ -8,7 +8,9 @@ import { Route, Routes } from "react-router-dom";
  * This will ensure the bundle contains only the core code and respective route bundle
  */
 const CustomFieldExtension = React.lazy(() => import("./routes/CustomField"));
-const EntrySidebarExtension = React.lazy(() => import("./routes/EntrySidebarKB"));
+const EntrySidebarExtension = React.lazy(() => import("./routes/EntrySidebar"));
+const EntrySidebarLanguages = React.lazy(() => import("./routes/EntrySidebarLanguages"));
+const EntrySidebarFieldUpdate = React.lazy(() => import("./routes/EntrySidebarFieldUpdate"));
 const AppConfigurationExtension = React.lazy(() => import("./routes/AppConfiguration"));
 const AssetSidebarExtension = React.lazy(() => import("./routes/AssetSidebar"));
 const StackDashboardExtension = React.lazy(() => import("./routes/StackDashboard"));
@@ -32,6 +34,22 @@ function App() {
             element={
               <Suspense>
                 <EntrySidebarExtension />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/entry-sidebar-languages"
+            element={
+              <Suspense>
+                <EntrySidebarLanguages />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/entry-sidebar-fieldupdate"
+            element={
+              <Suspense>
+                <EntrySidebarFieldUpdate />
               </Suspense>
             }
           />
