@@ -1,7 +1,8 @@
 import React, { Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import { MarketplaceAppProvider } from "./MarketplaceAppProvider";
-import { Route, Routes } from "react-router-dom";
 
 /**
  * All the routes are Lazy loaded.
@@ -10,7 +11,7 @@ import { Route, Routes } from "react-router-dom";
 const CustomFieldExtension = React.lazy(() => import("./routes/CustomField"));
 const EntrySidebarExtension = React.lazy(() => import("./routes/EntrySidebar"));
 const EntrySidebarLanguages = React.lazy(() => import("./routes/EntrySidebarLanguages"));
-const EntrySidebarFieldUpdate = React.lazy(() => import("./routes/EntrySidebarFieldUpdate"));
+// const EntrySidebarFieldUpdate = React.lazy(() => import("./routes/EntrySidebarFieldUpdate"));
 const AppConfigurationExtension = React.lazy(() => import("./routes/AppConfiguration"));
 const AssetSidebarExtension = React.lazy(() => import("./routes/AssetSidebar"));
 const StackDashboardExtension = React.lazy(() => import("./routes/StackDashboard"));
@@ -33,7 +34,7 @@ function App() {
             path="/entry-sidebar"
             element={
               <Suspense>
-                <EntrySidebarExtension />
+                <CustomFieldExtension />
               </Suspense>
             }
           />
@@ -49,7 +50,7 @@ function App() {
             path="/entry-sidebar-fieldupdate"
             element={
               <Suspense>
-                <EntrySidebarFieldUpdate />
+                <CustomFieldExtension />
               </Suspense>
             }
           />

@@ -29,8 +29,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
     "test": "react-scripts test --env=jsdom --verbose",
     "eject": "react-scripts eject",
     "show-report": "npx playwright show-report",
@@ -74,6 +74,7 @@
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "react-test-renderer": "^16.14.0",
+    "rewire": "^6.0.0",
     "style-loader": "^3.3.1",
     "ts-node": "^10.8.2"
   }
